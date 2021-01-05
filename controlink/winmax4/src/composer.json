@@ -1,0 +1,12 @@
+{
+    "name": "controlink/winmax4",
+    "description": "Winmax4 API Calls",
+    "authors": [
+        {
+            "name": "João Ribeiro",
+            "email": "joao.ribeiro@controlink.pt"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
