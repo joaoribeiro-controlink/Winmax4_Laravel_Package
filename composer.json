@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "\\Controlink\\Winmax4\\": "controlink/winmax4/src/"
+            "\\Controlink\\Winmax4": "controlink/winmax4/src/"
         }
     },
     "extra": {
