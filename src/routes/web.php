@@ -1,4 +1,4 @@
 <?php
 use controlink\winmax4\Http\Controllers\ArticleController;
 
-Route::get('/getArticles', [ArticleController::class, 'index']);
+Route::get('/getArticles', [ArticleController::class, 'get']);

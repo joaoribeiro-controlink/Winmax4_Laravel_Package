@@ -9,7 +9,8 @@ class ArticleController extends Controller
     public function get()
     {
 
-        $client = new SoapClient("http://winmax4.controlink.pt/winmax4/webservices/generic.asmx?wsdl");
+        dd(config('winmax4.url'));
+        $client = new SoapClient(config('winmax4.url'));
         $XMLRQString = '<?xml version="1.0" encoding="utf-8"?>' .
             '<x:Winmax4ArticlesRQ xmlns:x="urn:Winmax4ArticlesRQ">' .
             '   <GetPrices />' .
@@ -17,9 +18,9 @@ class ArticleController extends Controller
             '   <GetTaxes />' .
             '</x:Winmax4ArticlesRQ>';
         $Params = array(
-            'CompanyCode' => '1',
-            'UserLogin' => 'WS',
-            'UserPassword' => 'Clink2015!',
+            'CompanyCode' => config('winmax4.company_code'),
+            'UserLogin' => config('winmax4.user'),
+            'UserPassword' => config('winmax4.password'),
             'Winmax4ArticleRQXML' => $XMLRQString
         );
         $return = $client->GetArticles($Params);
@@ -28,6 +29,7 @@ class ArticleController extends Controller
             echo '</br>Error: ' . $XMLRSString->Code . " " . $XMLRSString->Message;
         else
             foreach ($XMLRSString->Articles->Article as $article) {
+                dd($article);
                 echo '</br>Code: <b>' . $article->ArticleCode . '</b>';
                 echo '</br>Designation: ' . $article->Designation;
             }
