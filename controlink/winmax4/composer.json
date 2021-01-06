@@ -1,13 +1,13 @@
 {
     "name": "controlink/winmax4",
     "description": "Winmax4 API Calls",
-    "license": "MIT",
     "authors": [
         {
             "name": "João Ribeiro",
             "email": "joao.ribeiro@controlink.pt"
         }
     ],
+    "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "psr-4": {
