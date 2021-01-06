@@ -17,7 +17,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "controlink\\winmax4\\Winmax4ServiceProvider"
+                "controlink\\winmax4\\src\\Winmax4ServiceProvider"
             ]
         }
     }
