@@ -15,7 +15,7 @@ class CreateSubfamiliesTable extends Migration
     {
         Schema::create('winmax4_subfamilies', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('family_id', false, true);
+            $table->bigInteger('Family_ID', false, true);
             $table->string('Code');
             $table->string('Designation');
             $table->timestamps();

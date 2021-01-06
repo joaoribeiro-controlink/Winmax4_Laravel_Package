@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read \controlink\winmax4\Family|null $family
  * @property string $Code
  * @property string $Designation
+ * @property int $Family_ID
  * @mixin \Eloquent
  * @method static \Illuminate\Database\Eloquent\Builder|Subfamily newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Subfamily newQuery()
@@ -20,7 +21,7 @@ class Subfamily extends Model
     protected $table = 'winmax4_subfamilies';
 
     protected $fillable = [
-        'family_id',
+        'Family_ID',
         'Code',
         'Designation'
     ];

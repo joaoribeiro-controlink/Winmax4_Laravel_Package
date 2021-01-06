@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @package controlink\winmax4
  * @property string $ArticleCode
  * @property string $Designation
- * @property int $family_id
+ * @property int $Family_ID
  * @property string $ImageHTTPPath
  * @property int $DiscountLevel
  * @property string $SellUnitCode
