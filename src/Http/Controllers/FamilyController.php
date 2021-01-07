@@ -1,10 +1,10 @@
 <?php
 
 
-namespace controlink\winmax4\Http\Controllers;
+namespace Controlink\Winmax4\Http\Controllers;
 
-use controlink\winmax4\Family;
-use controlink\winmax4\Subfamily;
+use Controlink\Winmax4\Family;
+use Controlink\Winmax4\Subfamily;
 use SimpleXMLElement;
 use SoapClient;
 
