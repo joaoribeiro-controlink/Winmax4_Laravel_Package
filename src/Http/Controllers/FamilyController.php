@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Controlink\Winmax4\Http\Controllers;
+namespace controlink\winmax4\Http\Controllers;
 
 use controlink\winmax4\Family;
 use controlink\winmax4\Subfamily;
