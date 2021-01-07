@@ -7,6 +7,7 @@
             "email": "joao.ribeiro@controlink.pt"
         }
     ],
+    "license": "MIT",
     "minimum-stability": "dev",
     "require": {
         "php": "^7.2",
