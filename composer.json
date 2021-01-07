@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Controlink\\Winmax4\\": "src/"
+            "\\Controlink\\Winmax4": "controlink/winmax4/src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "controlink\\winmax4\\Winmax4ServiceProvider"
+                "\\Controlink\\Winmax4\\Winmax4ServiceProvider"
             ]
         }
     }
