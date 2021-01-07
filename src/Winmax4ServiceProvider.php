@@ -1,6 +1,6 @@
 <?php
 
-namespace controlink\winmax4;
+namespace Controlink\Winmax4;
 
 use Illuminate\Support\ServiceProvider;
 
