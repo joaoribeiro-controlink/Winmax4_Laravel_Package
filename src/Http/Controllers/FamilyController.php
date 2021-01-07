@@ -120,8 +120,8 @@ class FamilyController extends Controller
 
         return response()->json([
             'Code' => 200,
-            'Message' => 'SubFamilies Saved!'
-        ], 500);
+            'Message' => 'All SubFamilies have been saved!'
+        ], 200);
 
     }
 }
