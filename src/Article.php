@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $ArticleCode
  * @property string $Designation
  * @property int $Family_ID
+ * @property int $SubFamily_ID
  * @property string $ImageHTTPPath
  * @property int $DiscountLevel
  * @property string $SellUnitCode
@@ -56,6 +57,7 @@ class Article extends Model
         'ArticleCode',
         'Designation',
         'Family_ID',
+        'SubFamily_ID',
         'ImageHTTPPath',
         'DiscountLevel',
         'SellUnitCode',

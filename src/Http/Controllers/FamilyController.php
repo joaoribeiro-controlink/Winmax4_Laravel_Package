@@ -66,7 +66,6 @@ class FamilyController extends Controller
                         } else {
                             $families = [];
                             $subfamilies = [];
-                            //dd(count($XMLRSString->Families->Family));
                             foreach ($XMLRSString->Families->Family as $family){
                                 $familyObject = new Family();
                                 $familyObject->Code = $family->Code->__toString()  ? $family->Code->__toString()  : null;
@@ -108,8 +107,6 @@ class FamilyController extends Controller
                    'Message' => trans('winmax4::error.url')
                ], 400);
            }
-
-
 
             if(!config('winmax4.user')){
                 return response()->json([

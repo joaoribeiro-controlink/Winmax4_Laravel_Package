@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->char('ArticleCode', 21)->unique();
             $table->char('Designation', 50);
             $table->bigInteger('Family_ID', false,true);
+            $table->bigInteger('SubFamily_ID', false,true)->nullable();
             $table->string('ImageHTTPPath')->nullable();
             $table->integer('DiscountLevel')->nullable();
             $table->string('SellUnitCode')->nullable();
@@ -51,6 +52,10 @@ class CreateArticlesTable extends Migration
             $table->foreign('Family_ID')
                 ->references('id')
                 ->on('winmax4_families');
+
+            $table->foreign('SubFamily_ID')
+                ->references('id')
+                ->on('winmax4_subfamilies');
 
             $table->foreign('PurchaseTax_ID')
                 ->references('id')
