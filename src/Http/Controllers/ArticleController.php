@@ -2,10 +2,12 @@
 
 namespace Controlink\Winmax4\Http\Controllers;
 
-use Controlink\Winmax4\Article;
-use Controlink\Winmax4\Family;
-use Controlink\Winmax4\Subfamily;
-use Controlink\Winmax4\Tax;
+use Controlink\Winmax4\Http\Models\Article;
+use Controlink\Winmax4\Http\Models\Family;
+use Controlink\Winmax4\Http\Models\Subfamily;
+use Controlink\Winmax4\Http\Models\Tax;
+use GuzzleHttp\Client;
+use Illuminate\Http\Request;
 use SimpleXMLElement;
 use SoapClient;
 
@@ -73,6 +75,20 @@ class ArticleController extends Controller
                         if(isset($article->SaleTaxFees->TaxFee->Percentage)){
                             $SaleTax = Tax::where('vat', $article->SaleTaxFees->TaxFee->Percentage->__toString())->first();
                         }
+
+                        foreach ($article->Stocks->Stock as $stock){
+                            $client = new Client();
+                            $response = $client->post(route('getWarehouse'), [
+                                'json' => [
+                                    'code' => $stock->WarehouseCode
+                                ]
+                            ]);
+
+
+                        }
+                        die();
+
+
 
                         $Family = Family::where('Code', $article->FamilyCode)->first();
                         $SubFamily = Subfamily::where('Code', $article->SubFamilyCode)->where('Family_ID', $Family->id)->first();
@@ -150,5 +166,10 @@ class ArticleController extends Controller
                 'articles' => $articles,
             ], 200);
         }
+    }
+
+    public function create(Request $request){
+        $json = json_decode(json_encode($request->json()->all()), FALSE);
+
     }
 }
